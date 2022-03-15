@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="include\AKLib\ObjLoader.h">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\stb_image\stb_image\stb_image_write.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\stb_image\stb_image\std_image.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\AKLib\Allocator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\AKLib\File.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\AKLib\String.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\AKLib\Vector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\AKLib\common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\AKLib\AllocatorObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\AKLib\Math\Point.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\AKLib\Entity.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\AKLib\HashMap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\freetype\include\ft2build.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\AKLib\Font\Font.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\stb_image\stb_image\stb_image.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\stb_image\stb_image\stb_image_write.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\AKLib\Image\Image.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\AKLib\Gui\Container.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\AKLib\Gui\Component.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\AKLib\Gui\Button.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\AKLib\SharedPtr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\AKLib\UniquePtr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\AKLib\XML\Xml.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\AKLib\Stack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\AKLib\Font\FontAtlas.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\AKLib\Math\Vector2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\AKLib\Math\Math.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\AKLib\Math\Vector3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\AKLib\Math\AABB.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\AKLib\Math\Matrix4.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\AKLib\Math\Quaternion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\AKLib\Math\Vector4.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\AKLib\Point.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\AKLib\DLL\DLL_Loader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="include\AKLib\Allocator.inl">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="include\AKLib\File.inl">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="include\AKLib\String.inl">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="include\AKLib\Vector.inl">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="include\AKLib\ObjLoader.inl">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="include\AKLib\AllocatorObject.inl">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="include\AKLib\HashMap.inl">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="include\AKLib\Font\Font.inl">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="include\AKLib\Image\Image.inl">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="include\AKLib\SharedPtr.inl">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="include\AKLib\UniquePtr.inl">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="include\AKLib\XML\Xml.inl">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="include\AKLib\Stack.inl">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="include\AKLib\Font\FontAtlas.inl">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="include\AKLib\Math\Vector2.inl">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="include\AKLib\Math\Math.inl">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="include\AKLib\Math\Vector3.inl">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="include\AKLib\Math\Matrix4.inl">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="include\AKLib\Math\Vector4.inl">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="include\AKLib\Math\Quaternion.inl">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="include\AKLib\DLL\DLL_Loader.inl">
+      <Filter>Header Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>
