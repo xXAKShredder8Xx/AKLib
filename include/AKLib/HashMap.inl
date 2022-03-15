@@ -144,7 +144,7 @@ AKL_INLINE bool HashIterator<K, T, I, D, F>::operator != (HashIterator<K, T, I, 
 
 template <typename K, typename T, void(*I)(K&, T&), void(*D)(K&, T&), unsigned int(*F)(K&)>
 AKL_INLINE HashMap<K, T, I, D, F>::HashMap()
-	: count{ 0 }, capacity{ 8 }, entries{ Allocator<HashEntry<K, T>>::Allocate(8) }
+	: count{ 0 }, capacity{ 8 }, entries{ Allocator<HashEntry<K, T>>::Allocate(8, false) }
 {
 	for (int i = 0; i < capacity; i++) 
 	{
@@ -155,7 +155,7 @@ AKL_INLINE HashMap<K, T, I, D, F>::HashMap()
 
 template <typename K, typename T, void(*I)(K&, T&), void(*D)(K&, T&), unsigned int(*F)(K&)>
 AKL_INLINE HashMap<K, T, I, D, F>::HashMap(std::initializer_list<HashEntry<K, T>> list)
-	: count{ 0 }, capacity{ 8 }, entries{ Allocator<HashEntry<K, T>>::Allocate(8) }
+	: count{ 0 }, capacity{ 8 }, entries{ Allocator<HashEntry<K, T>>::Allocate(8, false) }
 {
 	for (int i = 0; i < capacity; i++)
 	{
@@ -395,7 +395,7 @@ AKL_INLINE void HashMap<K, T, I, D, F>::AdjustCapacity(size_t cap)
 			}
 		}
 
-		entries = Allocator<HashEntry<K, T>>::Deallocate(entries);
+		entries = Allocator<HashEntry<K, T>>::Deallocate(entries, false);
 		capacity = 0;
 		count = 0;
 		return;
@@ -422,7 +422,7 @@ AKL_INLINE void HashMap<K, T, I, D, F>::AdjustCapacity(size_t cap)
 		count++;
 	}
 
-	Allocator<HashEntry<K, T>>::Deallocate(entries);
+	Allocator<HashEntry<K, T>>::Deallocate(entries, false);
 
 	capacity = cap;
 	entries = temp_entries;
