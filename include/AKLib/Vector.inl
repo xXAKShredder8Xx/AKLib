@@ -28,6 +28,8 @@ AKL_INLINE Vector<T>::Vector(const std::initializer_list<T>& list)
 template <typename T>
 Vector<T>& Vector<T>::operator = (const Vector<T>& other) 
 {
+	if (m_Size) this->~Vector();
+
 	m_Size = other.m_Size;
 	m_Capacity = other.m_Capacity;
 	m_Elements = Allocator<T>::Duplicate(other.m_Elements, m_Capacity, false);
@@ -38,7 +40,7 @@ Vector<T>& Vector<T>::operator = (const Vector<T>& other)
 template <typename T>
 AKL_INLINE Vector<T>::~Vector() 
 {
-	if (m_Elements != NULL) 
+	if (m_Elements != NULL && m_Capacity > 0) 
 	{
 		Allocator<T>::Deallocate(m_Elements, false);
 		m_Capacity = 0;
@@ -57,6 +59,20 @@ template <typename T>
 AKL_INLINE ConstIterator<T> Vector<T>::begin() const
 {
 	return m_Elements;
+}
+
+template <typename T>
+AKL_INLINE Iterator<T> Vector<T>::back() 
+{
+	if (!m_Size) return end();
+	return m_Elements + m_Size - 1;
+}
+
+template <typename T>
+AKL_INLINE ConstIterator<T> Vector<T>::back() const 
+{
+	if (!m_Size) return end();
+	return m_Elements + m_Size - 1;
 }
 
 template <typename T>
@@ -166,10 +182,26 @@ AKL_INLINE Iterator<T> Vector<T>::emplace(Iterator<T> pos, Args... args)
 
 	Allocator<T>::Copy(it.get(), it.get() + 1, size, false);
 
-	*it = T(args...);
+	*it = T(std::forward<Args>(args)...);
 
 	m_Size++;
 	return it;
+}
+
+template <typename T>
+inline Iterator<T> Vector<T>::insert(Iterator<T> pos, const T& value) 
+{
+	size_t index = pos.get() - m_Elements;
+	resize(size() + 1);
+	
+	for (Iterator<T> i = back(); i != pos; --i) 
+	{
+		Allocator<T>::Copy(i.get() - 1, i.get(), 1, false);
+	}
+
+	Allocator<T>::Copy((void*)&value, &m_Elements[index], 1, false);
+
+	return &m_Elements[index];
 }
 
 template <typename T>
@@ -193,7 +225,7 @@ AKL_INLINE bool Vector<T>::resize(size_t newSize, Args... defaultArgs)
 }
 
 template <typename T>
-AKL_INLINE T& Vector<T>::operator [] (int idx) 
+AKL_INLINE T& Vector<T>::operator [] (size_t idx) const 
 {
 	return m_Elements[idx];
 }

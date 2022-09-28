@@ -46,6 +46,6 @@ struct MemoryHelper
 NSE()
 
 #define AKL_INLINE inline
-#include "AKLIb/Allocator.inl"
+#include "AKLib/Allocator.inl"
 
 #endif // AK_SERIAL_ALLOCATOR_H

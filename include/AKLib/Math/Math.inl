@@ -16,6 +16,18 @@ AKL_INLINE T Interpolate(T goal, T current, T dt)
 	return goal;
 }
 
+template <typename T>
+AKL_INLINE T Max(T a, T b) 
+{
+	return (a > b ? a : b);
+}
+
+template <typename T>
+AKL_INLINE T Min(T a, T b)
+{
+	return (a < b ? a : b);
+}
+
 NSE()
 
 NSE()

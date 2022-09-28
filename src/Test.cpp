@@ -20,8 +20,11 @@
 #include "AKLib/DLL/DLL_Loader.h"
 #include <functional>
 #include "AKLib/HashMap.h"
+#include "AKLib/BigInt.h"
+#include "AKLib/ECS/Component.h"
+#include "AKLib/ECS/Ecs.h"
 
-typedef void* (*Create)();
+typedef int* (*Create)();
 typedef void (*Delete)(void*);
 typedef void(*GetFunctionNames)(const char**&, int**&, int*);
 typedef void*(*GetFunctions)();

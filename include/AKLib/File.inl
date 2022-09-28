@@ -107,7 +107,7 @@ AKL_INLINE String File::ReadLine()
 	currentLocation = endLoc;
 
 	Vector<char> buf(size + 1);
-	Allocator<char>::Copy(buffer.data() + startLoc, buf.data(), size);
+	Allocator<char>::Copy(buffer.data() + startLoc, buf.data(), size, false);
 	buf[size] = '\0';
 
 	return buf.data();
@@ -136,7 +136,7 @@ AKL_INLINE bool File::ReadLine(String& str)
 	currentLocation = endLoc;
 
 	Vector<char> buf(size + 1);
-	Allocator<char>::Copy(buffer.data() + startLoc, buf.data(), size);
+	Allocator<char>::Copy(buffer.data() + startLoc, buf.data(), size, true);
 	buf[size] = '\0';
 
 	str = buf.data();
@@ -176,7 +176,7 @@ AKL_INLINE bool File::Read(char* buf)
 
 	buffer[len] = '\0';
 
-	Allocator<char>::Copy(buffer.data(), buf, len);
+	Allocator<char>::Copy(buffer.data(), buf, len, true);
 
 	return true;
 }

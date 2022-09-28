@@ -156,6 +156,8 @@ public:
 
 	inline Iterator<T> begin();
 	inline ConstIterator<T> begin() const;
+	inline Iterator<T> back();
+	inline ConstIterator<T> back() const;
 	inline Iterator<T> end();
 	inline ConstIterator<T> end() const;
 
@@ -173,12 +175,14 @@ public:
 	template <typename ...Args>
 	inline Iterator<T> emplace(Iterator<T> pos, Args... args);
 
+	inline Iterator<T> insert(Iterator<T> pos, const T& value);
+
 	template <typename ...Args>
 	inline bool reserve(size_t newCapacity, Args... defaultArgs);
 	template <typename ...Args>
 	inline bool resize(size_t newSize, Args... defaultArgs);
 
-	inline T& operator [] (int idx);
+	inline T& operator [] (size_t idx) const;
 
 	inline size_t Grow(size_t newSize) const;
 	inline T* data() const { return m_Elements; };

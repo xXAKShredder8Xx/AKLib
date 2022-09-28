@@ -19,6 +19,12 @@ static const T DEG_TO_RAD = (PI<T> / (T)180);
 template <typename T>
 inline AKLIB_API T Interpolate(T goal, T current, T dt);
 
+template <typename T>
+inline AKLIB_API T Max(T a, T b);
+
+template <typename T>
+inline AKLIB_API T Min(T a, T b);
+
 NSE()
 
 NSE()

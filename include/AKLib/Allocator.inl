@@ -18,7 +18,7 @@ AKL_INLINE T* Allocator<T>::Allocate(size_t size, bool cPtr, Args... args)
 	{
 		for (int i = 0; i < size; i++)
 		{
-			new (ptr + i) T{ args... };
+			new (ptr + i) T{ std::forward<Args>(args)... };
 		}
 	}
 

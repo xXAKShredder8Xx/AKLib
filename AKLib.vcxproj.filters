@@ -50,9 +50,6 @@
     <ClInclude Include="include\AKLib\Math\Point.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\AKLib\Entity.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="include\AKLib\HashMap.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -122,6 +119,18 @@
     <ClInclude Include="include\AKLib\DLL\DLL_Loader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\AKLib\BigInt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\AKLib\ECS\Ecs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\AKLib\ECS\Component.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\AKLib\ECS\System.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="include\AKLib\Allocator.inl">
@@ -185,6 +194,18 @@
       <Filter>Header Files</Filter>
     </None>
     <None Include="include\AKLib\DLL\DLL_Loader.inl">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="include\AKLib\BigInt.inl">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="include\AKLib\ECS\Component.inl">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="include\AKLib\ECS\System.inl">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="include\AKLib\ECS\Ecs.inl">
       <Filter>Header Files</Filter>
     </None>
   </ItemGroup>
